@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://seo.ecnix.com/sitemap.xml
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+
+# Disallow specific files
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.php$
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Allow important directories
+Allow: /images/
+Allow: /assets/
+Allow: /blog/
+Allow: /fonts/

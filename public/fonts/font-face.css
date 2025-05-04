@@ -1,0 +1,44 @@
+/* Definiciones de fuentes alternativas usando @font-face */
+/* Este archivo es opcional y se puede incluir en _app.js si prefieres usar @font-face en lugar de next/font */
+
+/* MBType - Fuente principal */
+@font-face {
+  font-family: "MBType";
+  src: url("/fonts/mbtype.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Raleway - Fuente de respaldo */
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/raleway-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/raleway-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/raleway-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/raleway-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

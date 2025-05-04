@@ -1,0 +1,86 @@
+/* Estilos no críticos cargados de forma diferida */
+
+/* Animaciones para scroll */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientAnimation 8s ease-in-out infinite;
+}
+
+.animate-gradient-smooth {
+  display: inline;
+  background: linear-gradient(
+    270deg,
+    rgba(59, 130, 246, 0.9) /* Azul claro */,
+    rgba(37, 99, 235, 0.9) /* Azul medio */,
+    rgba(30, 64, 175, 0.9) /* Azul oscuro */,
+    rgba(59, 130, 246, 0.9) /* Azul claro de nuevo */
+  );
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: gradientSlide 12s linear infinite;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+    background-image: linear-gradient(to right, rgba(59, 130, 246, 0.7), rgba(0, 0, 0, 0.8));
+  }
+  50% {
+    background-position: 100% 50%;
+    background-image: linear-gradient(to right, rgba(30, 64, 175, 0.7), rgba(59, 130, 246, 0.7));
+  }
+  100% {
+    background-position: 0% 50%;
+    background-image: linear-gradient(to right, rgba(59, 130, 246, 0.7), rgba(0, 0, 0, 0.8));
+  }
+}
+
+@keyframes gradientSlide {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+/* Estilos para componentes que aparecen después del scroll */
+.accordion-content {
+  animation: accordion-down 0.2s ease-out;
+}
+
+.accordion-content[data-state="closed"] {
+  animation: accordion-up 0.2s ease-out;
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
