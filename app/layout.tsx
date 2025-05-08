@@ -73,6 +73,11 @@ export const metadata: Metadata = {
     bing: "verificacion-bing",
   },
   category: "Marketing Digital",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico",
+  },
     generator: 'v0.dev'
 }
 
@@ -84,6 +89,7 @@ export default function RootLayout({
   return (
     <html lang="es" className={raleway.className} suppressHydrationWarning>
       <head>
+        {/* Actualizamos la referencia al favicon */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
