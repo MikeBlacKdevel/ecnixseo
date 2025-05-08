@@ -15,14 +15,14 @@ const raleway = Raleway({
 
 // Metadatos SEO optimizados
 export const metadata: Metadata = {
-  title: "Ecnix SEO - Agencia de Posicionamiento SEO | Estrategias Avanzadas",
+  title: "ecnix seo - agencia de posicionamiento seo | estrategias avanzadas",
   description:
     "Estrategias SEO avanzadas para empresas y particulares que buscan dominar los resultados de búsqueda. Auditorías SEO, posicionamiento local y optimización web.",
   keywords:
     "SEO, posicionamiento web, marketing digital, auditoría SEO, SEO local, estrategia SEO, optimización web, palabras clave, link building, resultados de búsqueda",
-  authors: [{ name: "Ecnix SEO" }],
-  creator: "Ecnix SEO",
-  publisher: "Ecnix SEO",
+  authors: [{ name: "ecnix SEO" }],
+  creator: "ecnix SEO",
+  publisher: "ecnix SEO",
   formatDetection: {
     email: false,
     address: false,
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_ES",
     url: "https://seo.ecnix.com",
-    siteName: "Ecnix SEO",
-    title: "Ecnix SEO - Agencia de Posicionamiento SEO | Estrategias Avanzadas",
+    siteName: "ecnix SEO",
+    title: "ecnix seo - agencia de posicionamiento seo | estrategias avanzadas",
     description:
       "Estrategias SEO avanzadas para empresas y particulares que buscan dominar los resultados de búsqueda. Auditorías SEO, posicionamiento local y optimización web.",
     images: [
@@ -51,13 +51,13 @@ export const metadata: Metadata = {
         url: "https://seo.ecnix.com/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Ecnix SEO - Agencia de Posicionamiento SEO",
+        alt: "ecnix SEO - Agencia de Posicionamiento SEO",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ecnix SEO - Agencia de Posicionamiento SEO | Estrategias Avanzadas",
+    title: "ecnix seo - agencia de posicionamiento seo | estrategias avanzadas",
     description:
       "Estrategias SEO avanzadas para empresas y particulares que buscan dominar los resultados de búsqueda.",
     images: ["https://seo.ecnix.com/images/twitter-image.jpg"],
@@ -124,7 +124,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "Ecnix SEO",
+              name: "ecnix SEO",
               url: "https://seo.ecnix.com",
               logo: "https://seo.ecnix.com/logo.png",
               sameAs: [
@@ -151,7 +151,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              name: "Ecnix SEO",
+              name: "ecnix SEO",
               image: "https://seo.ecnix.com/logo.png",
               priceRange: "€€",
               description:

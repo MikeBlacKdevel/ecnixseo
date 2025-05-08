@@ -15,7 +15,7 @@ interface SEOHeadProps {
 }
 
 export function SEOHead({
-  title = "Ecnix SEO - Agencia de Posicionamiento SEO",
+  title = "ecnix seo - agencia de posicionamiento seo",
   description = "Estrategias SEO avanzadas para empresas y particulares que buscan dominar los resultados de búsqueda.",
   type = "website",
   imageUrl = "https://seo.ecnix.com/images/og-image.jpg",
@@ -49,11 +49,11 @@ export function SEOHead({
         dateModified: updatedAt || publishedAt,
         author: {
           "@type": "Person",
-          name: authorName || "Ecnix SEO",
+          name: authorName || "ecnix SEO",
         },
         publisher: {
           "@type": "Organization",
-          name: "Ecnix SEO",
+          name: "ecnix SEO",
           logo: {
             "@type": "ImageObject",
             url: `${baseUrl}/logo.png`,
