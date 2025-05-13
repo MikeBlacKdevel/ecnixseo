@@ -38,6 +38,7 @@ import OptimizeCss from "./optimize-css"
 // Añadir el componente OptimizeCss justo después de FontLoader en el componente Home:
 export default function Home() {
   const [scrolled, setScrolled] = useState(false)
+  const [ecnixMenuOpen, setEcnixMenuOpen] = useState(false)
 
   // Detectar scroll para cambiar el estilo del header
   useEffect(() => {
@@ -48,6 +49,21 @@ export default function Home() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  // Cerrar el menú desplegable cuando se hace clic fuera de él
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement
+      if (ecnixMenuOpen && !target.closest(".ecnix-menu-container")) {
+        setEcnixMenuOpen(false)
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [ecnixMenuOpen])
 
   const navLinks = [
     { href: "#what-is-seo", label: "¿Qué es SEO?" },
@@ -106,7 +122,7 @@ export default function Home() {
             title="Ir a la página de inicio"
           >
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo%20ecnix%20analytica-v92OZ5snI6euaDjOpNn2v8LdzQWJRy.png"
+              src="https://ecnixssd.com/logo%20ecnix%20white.png"
               alt="ecnix analytica logo"
               width={120}
               height={40}
@@ -115,13 +131,110 @@ export default function Home() {
             />
           </Link>
 
-          {/* Navegación de escritorio */}
-          <nav className="hidden md:flex items-center gap-8" aria-label="Navegación principal">
+          {/* Navegación de escritorio - Centrada */}
+          <nav className="hidden md:flex items-center mx-auto" aria-label="Navegación principal">
+            {/* Menú desplegable ecnix integrado en la navegación principal */}
+            <div className="relative ecnix-menu-container">
+              <Button
+                variant="ghost"
+                className="text-zinc-400 hover:text-blue-400 transition-colors flex items-center px-3 py-2"
+                onClick={() => setEcnixMenuOpen(!ecnixMenuOpen)}
+                aria-expanded={ecnixMenuOpen}
+                aria-haspopup="true"
+              >
+                ecnix
+                <ChevronRight className={`h-4 w-4 transition-transform ${ecnixMenuOpen ? "rotate-90" : ""}`} />
+              </Button>
+
+              {ecnixMenuOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-zinc-900/95 border border-zinc-800 rounded-lg shadow-lg z-50 overflow-hidden">
+                  <div className="py-0">
+                    <div className="px-4 py-2 text-xs text-zinc-500 border-b border-zinc-800">
+                      servicios principales
+                    </div>
+                    <a
+                      href="https://analytica.ecnix.com"
+                      className="block px-4 py-2 text-sm text-zinc-300 hover:bg-blue-900/20 hover:text-blue-400"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      analytica
+                    </a>
+                    <a
+                      href="https://web.ecnix.com"
+                      className="block px-4 py-2 text-sm text-zinc-300 hover:bg-blue-900/20 hover:text-blue-400"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      web creation
+                    </a>
+                    <a
+                      href="https://security.ecnix.com"
+                      className="block px-4 py-2 text-sm text-zinc-300 hover:bg-blue-900/20 hover:text-blue-400"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      security
+                    </a>
+                    <a
+                      href="https://seo.ecnix.com"
+                      className="block px-4 py-2 text-sm text-zinc-300 hover:bg-blue-900/20 hover:text-blue-400"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      seo
+                    </a>
+                    <a
+                      href="https://design.ecnix.com"
+                      className="block px-4 py-2 text-sm text-zinc-300 hover:bg-blue-900/20 hover:text-blue-400"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      design
+                    </a>
+                    <a
+                      href="https://ecnix.ai"
+                      className="block px-4 py-2 text-sm text-zinc-300 hover:bg-blue-900/20 hover:text-blue-400"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      ecnix ai
+                    </a>
+                    <div className="px-4 py-2 text-xs text-zinc-500 border-t border-b border-zinc-800">saas</div>
+                    <a
+                      href="https://ecnix.dev"
+                      className="block px-4 py-2 text-sm text-zinc-300 hover:bg-blue-900/20 hover:text-blue-400"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      developer
+                    </a>
+                    <a
+                      href="https://pages.ecnix.com"
+                      className="block px-4 py-2 text-sm text-zinc-300 hover:bg-blue-900/20 hover:text-blue-400"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      landing pages
+                    </a>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-sm text-zinc-300 hover:bg-blue-900/20 hover:text-blue-400"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      investigación crítica y real
+                    </a>
+                  </div>
+                </div>
+              )}
+            </div>
+
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm text-zinc-400 hover:text-blue-400 transition-colors"
+                className="text-sm text-zinc-400 hover:text-blue-400 transition-colors px-3 py-2"
               >
                 {link.label}
               </Link>
@@ -131,9 +244,9 @@ export default function Home() {
           <div className="flex items-center ml-auto md:ml-0 gap-4">
             <Button
               className="hidden md:flex bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white border-0"
-              aria-label="Iniciar sesión en ecnix"
+              aria-label="iniciar sesión en ecnix"
             >
-              Iniciar sesión ecnix
+              iniciar sesión ecnix
             </Button>
 
             {/* Menú móvil */}
@@ -717,9 +830,9 @@ export default function Home() {
                   </p>
                   <Button
                     className="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white border-0 rounded-lg"
-                    aria-label="Conocer nuestro proceso SEO"
+                    aria-label="conocer nuestro proceso seo"
                   >
-                    Conoce Nuestro Proceso
+                    conoce nuestro proceso
                     <ChevronRight className="ml-2 h-4 w-4" aria-hidden="true" />
                   </Button>
                 </div>
@@ -789,7 +902,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo%20ecnix%20analytica-v92OZ5snI6euaDjOpNn2v8LdzQWJRy.png"
+                src="https://ecnixssd.com/logo%20ecnix%20white.png"
                 alt="ecnix analytica logo"
                 width={100}
                 height={30}
@@ -813,16 +926,16 @@ export default function Home() {
           </div>
           <div className="mt-6 pt-6 border-t border-zinc-800/50 text-center text-xs text-zinc-500">
             <p>
-              <Link href="/politica-de-privacidad" className="hover:text-blue-400 transition-colors">
-                Política de Privacidad
+              <Link href="https://legal.ecnix.com" className="hover:text-blue-400 transition-colors">
+                política de privacidad
               </Link>{" "}
               |{" "}
-              <Link href="/terminos-y-condiciones" className="hover:text-blue-400 transition-colors">
-                Términos y Condiciones
+              <Link href="https://legal.ecnix.com" className="hover:text-blue-400 transition-colors">
+                términos y condiciones
               </Link>{" "}
               |{" "}
               <Link href="/mapa-del-sitio" className="hover:text-blue-400 transition-colors">
-                Mapa del Sitio
+                mapa del sitio
               </Link>
             </p>
           </div>

@@ -54,18 +54,18 @@ export function HeroSection() {
             <Button
               className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white border-0 h-12 px-8 rounded-lg"
               onClick={() => scrollToSection("contact")}
-              aria-label="Solicitar auditoría SEO gratuita"
+              aria-label="solicitar auditoría seo gratuita"
             >
-              Solicitar Auditoría
+              solicitar auditoría
               <ChevronRight className="ml-2 h-4 w-4" aria-hidden="true" />
             </Button>
             <Button
               variant="outline"
               className="w-full sm:w-auto border-zinc-700 text-zinc-300 hover:bg-zinc-800 h-12 px-8 rounded-lg"
               onClick={() => scrollToSection("business")}
-              aria-label="Ver servicios de SEO"
+              aria-label="ver servicios de seo"
             >
-              Ver Servicios
+              ver servicios
             </Button>
           </div>
         </div>

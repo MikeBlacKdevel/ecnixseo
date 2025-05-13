@@ -112,7 +112,7 @@ export function ContactForm() {
         className="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white border-0 rounded-lg"
         disabled={isSubmitting}
       >
-        {isSubmitting ? "Enviando..." : "Solicitar consulta gratuita"}
+        {isSubmitting ? "enviando..." : "solicitar consulta gratuita"}
         <Mail className="ml-2 h-4 w-4" />
       </Button>
 
