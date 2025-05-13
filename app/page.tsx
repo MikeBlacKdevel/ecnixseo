@@ -686,18 +686,28 @@ export default function Home() {
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-blue-400 rounded-card blur-sm opacity-20"></div>
                 <div className="relative bg-zinc-900 rounded-card p-6 md:p-8 border border-zinc-800 h-full flex flex-col justify-between">
                   <div>
-                    <h3 id="about-us-heading" className="text-2xl font-bold mb-4">
-                      Nuestra Historia
-                    </h3>
                     <p className="text-zinc-400 mb-6">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit
-                      arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut
-                      in nulla enim.
+                      Todo comenzó cuando nuestro co-fundador, tras una década montado en la montaña rusa del poker
+                      online (donde aprendió que a veces hay que saber cuándo retirarse), decidió canalizar su pasión
+                      por la tecnología hacia caminos más disruptivos. Como divulgador científico, transformaba
+                      conceptos complejos en historias fascinantes que cualquiera podía entender, mientras que su faceta
+                      de hacktivista le llevó a cuestionar constantemente los límites establecidos por los gigantes
+                      tecnológicos.
+                    </p>
+                    <p className="text-zinc-400 mb-6">
+                      "Siempre he creído que el conocimiento debe ser accesible para todos. La ciencia y la tecnología
+                      no deberían ser territorios exclusivos de una élite", comenta entre risas mientras recuerda cómo
+                      explicaba algoritmos complejos usando analogías con tacos y burritos en sus charlas más
+                      concurridas.
                     </p>
                     <p className="text-zinc-400">
-                      Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna.
-                      Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget
-                      diam.
+                      Esta combinación única de divulgación científica y activismo digital fue el caldo de cultivo
+                      perfecto para ecnix. Como un profesor X digital, reunió a mentes brillantes que compartían su
+                      visión: usar el SEO no solo como herramienta de marketing, sino como vehículo para democratizar el
+                      acceso a la información. Así nació ecnix analytica, una alianza de inconformistas tecnológicos
+                      unidos por la promesa solemne de nunca jamás usar jerga incomprensible para impresionar a
+                      clientes, y siempre mantener un pie en la ética digital mientras el otro baila al ritmo de los
+                      algoritmos.
                     </p>
                   </div>
                 </div>
@@ -816,10 +826,10 @@ export default function Home() {
               />
             </div>
 
-            <div className="mt-16 text-center animate-on-scroll">
-              <div className="relative inline-block">
+            <div className="mt-16 animate-on-scroll">
+              <div className="relative w-full">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-blue-400 rounded-lg blur-sm opacity-30"></div>
-                <div className="relative bg-zinc-900 rounded-lg p-6 md:p-8 border border-zinc-800">
+                <div className="relative bg-zinc-900 rounded-lg p-6 md:p-8 border border-zinc-800 text-center">
                   <h3 id="why-choose-us-heading" className="text-2xl font-bold mb-4">
                     Nuestro Compromiso
                   </h3>
