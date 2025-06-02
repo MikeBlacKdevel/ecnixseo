@@ -724,7 +724,7 @@ export default function Home() {
                     <h3 className="text-xl font-bold mb-2">Mike Black</h3>
                     <p className="text-blue-400 text-sm font-medium mb-3">Co-fundador de ecnix</p>
                     <p className="text-zinc-400 text-sm">
-                      Desarrollador de código limpio con las condiciones SEO adecuadas.
+                      Desarrollador de código limpio con las condiciones SEO adecuadas. seo-senior hasta 2021
                     </p>
                   </div>
                 </div>
