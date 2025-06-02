@@ -691,8 +691,8 @@ export default function Home() {
                     <h3 className="text-xl font-bold mb-2">Marta Higueras</h3>
                     <p className="text-blue-400 text-sm font-medium mb-3">Team Manager</p>
                     <p className="text-zinc-400 text-sm mb-4">
-                      Es la mejor. Y ecnix busca a los mejores. puedes contratarla para que trabaje con nosotros o
-                      visitar su sitio web.
+                      Simplemente es la mejor. Teniendola de nuestro equipo lado nada puede fallar. Si prefieres
+                      trabajar con ella directamente aquí tienes su web
                     </p>
                     <a
                       href="https://seopedia.es"
