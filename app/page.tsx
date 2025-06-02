@@ -654,6 +654,106 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Team Members Section */}
+        <section
+          id="team-members"
+          className="py-20 md:py-32 relative bg-zinc-950"
+          aria-labelledby="team-members-heading"
+        >
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(30,64,175,0.1),transparent_70%)]"></div>
+          <div className="container mx-auto px-4 relative z-10">
+            <SectionTitle
+              badge="Nuestro Equipo"
+              title={
+                <>
+                  Miembros del <span className="text-blue-400">equipo</span>
+                </>
+              }
+              description="Conoce a los profesionales que hacen posible el éxito de ecnix SEO. Un equipo multidisciplinar con experiencia probada en el sector."
+              center
+            />
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              {/* Marta Higueras */}
+              <div className="relative animate-on-scroll text-center">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-blue-400 rounded-card blur-sm opacity-20"></div>
+                <div className="relative bg-zinc-900 rounded-card p-6 md:p-8 border border-zinc-800 h-full hover:border-blue-500/30 transition-colors duration-300">
+                  <div className="flex flex-col items-center">
+                    <div className="w-32 h-32 mb-6 relative">
+                      <Image
+                        src="/images/marta-higueras.jpg"
+                        alt="Marta Higueras - Team Manager"
+                        width={128}
+                        height={128}
+                        className="w-full h-full object-cover rounded-full border-4 border-blue-500/30"
+                      />
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">Marta Higueras</h3>
+                    <p className="text-blue-400 text-sm font-medium mb-3">Team Manager</p>
+                    <p className="text-zinc-400 text-sm mb-4">
+                      Es la mejor. Y ecnix busca a los mejores. puedes contratarla para que trabaje con nosotros o
+                      visitar su sitio web.
+                    </p>
+                    <a
+                      href="https://seopedia.es"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors"
+                    >
+                      seopedia.es
+                      <ArrowRight className="ml-1 h-4 w-4" aria-hidden="true" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mike Black */}
+              <div className="relative animate-on-scroll animation-delay-100 text-center">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-blue-400 rounded-card blur-sm opacity-20"></div>
+                <div className="relative bg-zinc-900 rounded-card p-6 md:p-8 border border-zinc-800 h-full hover:border-blue-500/30 transition-colors duration-300">
+                  <div className="flex flex-col items-center">
+                    <div className="w-32 h-32 mb-6 relative">
+                      <Image
+                        src="/images/mike-black.png"
+                        alt="Mike Black - Co-fundador de ecnix"
+                        width={128}
+                        height={128}
+                        className="w-full h-full object-cover rounded-full border-4 border-blue-500/30"
+                      />
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">Mike Black</h3>
+                    <p className="text-blue-400 text-sm font-medium mb-3">Co-fundador de ecnix</p>
+                    <p className="text-zinc-400 text-sm">
+                      Desarrollador de código limpio con las condiciones SEO adecuadas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Victor G Bustamante */}
+              <div className="relative animate-on-scroll animation-delay-200 text-center">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-blue-400 rounded-card blur-sm opacity-20"></div>
+                <div className="relative bg-zinc-900 rounded-card p-6 md:p-8 border border-zinc-800 h-full hover:border-blue-500/30 transition-colors duration-300">
+                  <div className="flex flex-col items-center">
+                    <div className="w-32 h-32 mb-6 relative">
+                      <Image
+                        src="/images/victor-bustamante.png"
+                        alt="Victor G Bustamante - Colaborador"
+                        width={128}
+                        height={128}
+                        className="w-full h-full object-cover rounded-full border-4 border-blue-500/30"
+                      />
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">Victor G Bustamante</h3>
+                    <p className="text-blue-400 text-sm font-medium mb-3">Colaborador</p>
+                    <p className="text-zinc-400 text-sm">Linkbuilder y estrategia SEM con copa de oro.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section id="faq" className="py-20 md:py-32 relative">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(30,64,175,0.1),transparent_60%)]"></div>
