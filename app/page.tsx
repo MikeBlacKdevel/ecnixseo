@@ -689,7 +689,7 @@ export default function Home() {
                       />
                     </div>
                     <h3 className="text-xl font-bold mb-2">Marta Higueras</h3>
-                    <p className="text-blue-400 text-sm font-medium mb-3">Team Manager</p>
+                    <p className="text-blue-400 text-sm font-medium mb-3">Team Leader</p>
                     <p className="text-zinc-400 text-sm mb-4">
                       Simplemente es la mejor. Teniendola de nuestro equipo lado nada puede fallar. Si prefieres
                       trabajar con ella directamente aquí tienes su web
@@ -745,7 +745,7 @@ export default function Home() {
                       />
                     </div>
                     <h3 className="text-xl font-bold mb-2">Victor G Bustamante</h3>
-                    <p className="text-blue-400 text-sm font-medium mb-3">Colaborador</p>
+                    <p className="text-blue-400 text-sm font-medium mb-3">colaborador de élite</p>
                     <p className="text-zinc-400 text-sm">Linkbuilder y estrategia SEM con copa de oro.</p>
                   </div>
                 </div>
